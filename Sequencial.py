@@ -41,10 +41,10 @@ class Sequencial:
         anos = int(input('Anos:\n'))
         meses = int(input('Meses:\n'))
         dias = int(input('Dias:\n'))
-        anos*=365
-        meses*=30
+        anos *= 365
+        meses *= 30
         idade = anos + meses + dias
-        print(f'Sua idade é {idade} dias')  
+        print(f'Sua idade é {idade} dias')
 
     # Criar um algoritmo que leia a idade de uma pessoa expressa em dias e apresente na tela a idade dessa pessoa expressa em anos, meses e dias. Considerar ano com 365 dias e mês com 30 dias.
     def ex7():
@@ -52,4 +52,20 @@ class Sequencial:
         anos = idade / 365
         meses = (idade % 365) / 30
         dias = (idade % 365) % 30
-        print(f'Você tem:\nAnos: {round(anos)}\nMeses: {round(meses)}\nDias: {round(dias)}')
+        print(
+            f'Você tem:\nAnos: {round(anos)}\nMeses: {round(meses)}\nDias: {round(dias)}')
+
+    #Criar um algoritmo que receba uma determinada hora (hora e minutos separados) e apresente na tela a hora em minutos.
+    def ex8():
+        horas = int(input('Informe as horas:'))
+        minutos = int(input('Informe os minutos:'))
+        total = (horas * 60) + minutos
+        print(f'{horas}Hs e {minutos} min = {total} min ')
+
+    # Criar um algoritmo que leia o tempo de duração de um evento em uma fábrica expressa em segundos e apresente-o na tela expresso em horas, minutos e segundos.
+    def ex9():
+        duracao = int(input('Informe a duração do evendo em segundos:\n'))
+        horas = duracao / 3600
+        minutos = (duracao % 3600) / 60
+        segundos = (duracao % 3600) % 60
+        print(f'Duração do evendo foi de\nHoras: {round(horas)}\nMinutos: {round(minutos)}\nSegundos: {round(segundos)}')
