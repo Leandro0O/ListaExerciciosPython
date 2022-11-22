@@ -2,4 +2,4 @@ from Sequencial import Sequencial
 
 excercios = Sequencial
 
-excercios.ex4()
+excercios.ex7()
