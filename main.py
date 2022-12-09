@@ -1,5 +1,8 @@
 from Sequencial import Sequencial
+from Repeticao import Repeticao
 
-excercios = Sequencial
+sequencial = Sequencial
 
-excercios.ex26()
+repeticao = Repeticao
+
+repeticao.ex35()

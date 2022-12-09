@@ -197,4 +197,114 @@ class Sequencial:
         print(f'O valor do serviço sera R$ {total:.2f}')
 
     # Sabe-se que  de carpete custa R$ 35,00. Criar um algoritmo que leia o comprimento e a largura de uma sala, em metros, calcule e apresente na tela o valor que será gasto para forrar todo o seu piso.
+    def ex27():
+        h = float(input('Informe o comprimento da sala:\n'))
+        b = float(input('Informe a largura da  sala:\n'))
+        total = (h*b) * 35.00
+        print(f'O valor do serviço sera R$ {total:.2f}')
+
+    #  O custo ao consumidor, de um carro novo, é a soma do custo de fábrica com a porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que a porcentagem do distribuidor seja de 28% e os impostos de 45%, criar um algoritmo que leia o custo de fábrica de um carro e apresenta na tela o custo final ao consumidor.
+    def ex28():
+        valor = int(input('Informe o valor de custo do veiculo:'))
+        valor = valor + ((valor * 0.28) + ( valor * 0.45))
+        print(f'O valor final do veiculo é R$ {valor:.2f}')
+
+    # Uma revendedora de carros usados paga a seus funcionários vendedores, um salário fixo por mês, mais uma comissão em reais também fixa para cada carro vendido e mais 5% do valor das vendas por ele efetuadas. Criar um algoritmo que leia o número de carros por ele vendidos, o valor total de suas vendas, o salário fixo e o valor que recebe por carro vendido, calcule e apresente na tela o salário mensal do vendedor.
+    def ex29():
+        salario = float(input('Informe o salario do vendedor:\n'))
+        comi = float(input('Informe a comissao do vendedor por carro:\n'))
+        quant = float(input('Informe a quantidade de carros vendidos:\n'))
+        venda = float(input('Informe o valor de cada carro:\n'))
+        salario = salario + (((quant * venda) * 0.05)+(quant * comi))
+        print(f'O salario do vendedor é R$ {salario:.2f}')
+
+    #  Uma conta telefônica é composta dos seguintes custos: 
+    #  Assinatura ==> R$ 17,90;
+    #  Minutos Chamada Local ==> R$ 0,04 por minuto;
+    #  Minutos Chamada Celular ==> R$0,20 por minuto;
+    #  Interurbanos.
+    #  Criar um algoritmo que calcule o valor total a ser pago sabendo será fornecida a quantidade de impulsos e de chamadas para celular. O valor gasto em interurbanos foi de R$ 34,29. Apresentar na tela os custos e o valor total a ser pago.
+    def ex30():
+        minL = float(input('Informe a quantidade de minutos de chamadas Locais:\n'))
+        minC = float(input('Informe a quantidade de minutos de chamadas Celular:\n'))
+        minL *= 0.04
+        minC *= 0.20
+        total = 17.90 + minL + minC + 34.29
+        print(f'O valor total da conta é R$ {total:.2f}')
+
+    # Criar um algoritmo que efetue o cálculo da quantidade de litros de combustível gastos em uma viagem, utilizando-se um automóvel que faz 12 Km por litro. Para realizar o cálculo, o algoritmo deve ler o tempo gasto na viagem e a velocidade média durante a mesma. Desta forma, será possível obter a distância percorrida com a fórmula: . Tendo o valor da distância, basta calcular a quantidade de litros de combustível utilizada na viagem com a fórmula: . O algoritmo deve apresentar na tela os valores de velocidade média, tempo gasto na viagem, à distância percorrida e a quantidade de litros utilizados na viagem.
+    def ex31():
+        horas = int(input('Informe as horas gastas na viagem:\n'))
+        minutos = int(input('Informe os minutos gastos na viagem:\n'))
+        velocidade = float(input('Informe a velocidade media da viagem:\n'))
+        tempo = (horas * 60) + minutos
+        distancia = (tempo /60) * velocidade
+        litros = distancia / 12
+        print(f"Tempo gasto: {horas} {'horas'  if horas > 10 else 'hora'} {minutos} minutos\nVelocidade media: {velocidade} Km/h\nDistancia percorrida: {distancia:.2f} Km\nListros gastos: {litros:.2f} L ")
+
+    # Criar um algoritmo que leia um valor L e calcula a área de um quadrado de lado L.
+    def ex32():
+        l = float(input('Informe o lado do quadrado:\n'))
+        area = pow(l,2)
+        print(f'A area do quadrado é {area}')
+
+    #      Criar um algoritmo que leia três números decimais: A, B e C. Em seguida, calcule e mostre: 
+    # // a área do triângulo retângulo que tem A por base e C por altura.
+    # // a área do círculo de raio C. (π = 3.14159).
+    # // a área do trapézio que tem A e B por bases e C por altura.
+    # // a área do quadrado que tem lado B.
+    # // a área do retângulo que tem lados A e B.
+    # # // o perímetro do retângulo que tem lados A e B.
+    def ex33():
+        a = float(input('Informe o valor de A:\n'))
+        b = float(input('Informe o valor de B:\n'))
+        c = float(input('Informe o valor de C:\n'))
+        triangulo = (a * c) /2
+        print(f'A area do tringulo é {triangulo:.2f}')
+        circulo = math.pi * pow((c * math.pi),2)
+        print(f'A area do circulo é {circulo:.2f}')
+        trapezio = ((a+b) * c) /2
+        print(f'A area do trapezio é {trapezio:.2f}')
+        quadrado = b*b
+        print(f'A area do quadrado é {quadrado:.2f}')
+        retanguloA = a * b
+        print(f'A area do retangulo é {retanguloA:.2f}')
+        retanguloP = (a + b) * 2
+        print(f'O perimetro do retangulo é {retanguloP:.2f}')
     
+    # Criar um algoritmo que leia os dois lados ​A e ​B de um triângulo retângulo e calcula a hipotenusa do triângulo. Para esse caso, considere que hipotenusa =  
+    def ex33():
+        a = float(input('Informe o tamanho de A:\n'))
+        b = float(input('Informe o tamanho de B:\n'))
+        h = math.sqrt(pow(a,2) + pow(b,2))
+        print(f'A hipotenusa do triângulo é : {h}')
+
+    # Criar um algoritmo que leia quatro números e imprime a ​média aritmética​ dos quatro números.
+    def ex34():
+        num1 = float(input('Informe o primeiro numero:\n'))
+        num2 = float(input('Informe o segundo numero:\n'))
+        num3 = float(input('Informe o terceiro numero:\n'))
+        num4 = float(input('Informe o quarto numero:\n'))
+        media = (num1+num2+num3+num4) / 4
+        print(f'A media dos quatro numeros é {media:.2f}')
+
+    # Criar um algoritmo que leia o número de cadastro de um funcionário, seu número de horas trabalhadas, o valor que recebe por hora e calcula o salário desse funcionário. A seguir, mostre na tela o número de cadastro e o salário do funcionário.
+    def ex35():
+        numCad = input('Informe o numero do cadastro\n')
+        ht = int(input('Informe as horas trabalhadas:\n'))  
+        vh = float(input('Informe o valor da hora trabalhada:\n'))
+        s = ht * vh
+        print(f'Numero do cadastro: {numCad}\nSalario: R$ {s:.2f}')
+    
+    # Criar um algoritmo que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, calcular e imprimir o total a receber no final do mês.
+    def ex36():
+        nome = input('Informe o nome do vendedor:\n')
+        sf = float(input('Informe o salario fixo:\n'))
+        qv = int(input('Informe a quantidade de vendas:\n'))
+        s = sf + (qv * 0.15)
+        print(f'Vendedor: {nome}\nSalario: R$ {s:.2f}')
+
+    # Criar um algoritmo que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, calcular e imprimir o total a receber no final do mês.
+    def ex37():
+        nome = input('Informe o nome do vendedor:\n')
+        
