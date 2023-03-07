@@ -2,6 +2,7 @@ from Sequencial import Sequencial
 from Repeticao import Repeticao
 from Decisao import Decisao
 from Funcoes import Func
+from Vetores import Vetores
 
 sequencial = Sequencial
 
@@ -11,5 +12,8 @@ decisao = Decisao
 
 func = Func
 
+vetores = Vetores
 
-print(func.soma(1,4))
+
+vetores.ex11()
+
